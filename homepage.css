@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+nav {
+    background-color: #333;
+    padding: 1.5rem 3rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.hero {
+    background: url('liquatic.jpg') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%; 
+    background-size: cover;
+    background-position: center center; 
+    background-attachment: fixed;
+}
+
+.hero-content { 
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.hero-content .cta-button {
+    display: inline-block;
+    background-color: #f5a623;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin-top: 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content .cta-button:hover {
+    background-color: #e89e20;
+    color: #fff;
+    transform: translateY(-3px); 
+}
+
+.featured-products {
+    text-align: center;
+    padding: 70px 30px;
+    background-color: #fff;
+}
+
+.featured-products h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.product-card {
+    display: inline-block;
+    width: 280px;
+    margin: 25px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.product-card p {
+    color: #888;
+    font-size: 1.4rem;
+    margin: 15px 0;
+}
+
+.product-card .cta-button {
+    display: inline-block;
+    background-color: #f5a623;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .cta-button:hover {
+    background-color: #e89e20;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 80px;
+}
+
+footer p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
