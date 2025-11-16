@@ -369,7 +369,7 @@ header .navbar {
 
 /* Footer Section Styles */
 .footer-section {
-    padding: 20px 0;
+    padding: 40px 0;
     background: var(--dark-color);
 }
 
@@ -377,30 +377,17 @@ header .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .footer-section :where(.copyright-text, .social-link, .policy-link) {
     color: var(--white-color);
     transition: 0.2s ease;
+    font-size: 20px;
+    text-align-last: center;
 }
 
-.footer-section .social-link-list {
-    display: flex;
-    gap: 25px;
-}
 
-.footer-section .social-link-list .social-link {
-    font-size: var(--font-size-l);
-}
-
-.footer-section .social-link-list .social-link:hover, .footer-section .policy-text .policy-link:hover {
-    color: var(--secondary-color);
-}
-
-.footer-section .policy-text .separator {
-    margin: 0 5px;
-    color: var(--white-color);
-}
 
 .iframe-container {
     position: relative;
@@ -419,7 +406,7 @@ header .navbar {
     border: 0;
 }
 
-/* Menu Section Responsive Media Query 1024px*/
+/* Menu Section Responsive Media Query*/
 @media screen and (max-width: 1024px) {
     .menu-section .menu-list {
         gap: 60px;
@@ -430,7 +417,7 @@ header .navbar {
     }
 }
 
-/* Responsive Media Query 900px*/
+/* Responsive Media Query*/
 @media screen and (max-width: 900px) {
     :root {
     --font-size-m: 1rem;
@@ -485,7 +472,7 @@ header .navbar {
         left: 0;
     }
 
-    /* in mobile panel links should be dark by default; hover still lights using primary color */
+    
     .navbar .nav-menu .nav-link {
         display: block;
         margin: 20px;
@@ -551,7 +538,14 @@ header .navbar {
     }
 }
 
-/* Menu Section Responsive Media Query 640px*/
+
+.order {
+    background: var(--primary-color);
+    text-align: center;  
+    
+}
+
+/* Menu Section Responsive Media Query*/
 @media screen and (max-width: 640px) {
    
     .menu-section .menu-list {
