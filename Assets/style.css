@@ -142,6 +142,21 @@ header .navbar {
     display: none;
 }
 
+/* Fix menu buttons appearing blurry on mobile */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 10000; /* ensures header stays above blur overlay */
+}
+
+#menu-open-button,
+#menu-close-button {
+    position: relative;
+    z-index: 11000; /* ensures buttons appear above blur overlay */
+}
+
+
 /* Hero Section Styles */
 .hero-section {
     min-height: 50vh;
