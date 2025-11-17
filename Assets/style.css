@@ -301,6 +301,95 @@ header .navbar {
     font-size: var(--font-size-m);
 }
 
+
+/* Inquiry Form Styles */
+#Inquiry {
+    padding: 80px 20px;
+    background: var(--light-pink-color);
+    text-align: center;
+}
+
+#Inquiry h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: 40px;
+    color: var(--dark-color);
+    text-transform: uppercase;
+    position: relative;
+}
+
+#Inquiry h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
+#Inquiry form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white-color);
+    padding: 40px 30px;
+    border-radius: var(--border-radius-m);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#Inquiry .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#Inquiry .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: var(--font-weight-medium);
+    color: var(--dark-color);
+    text-transform: capitalize;
+}
+
+#Inquiry .form-group input,
+#Inquiry .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: var(--font-size-m);
+    border: 1px solid var(--medium-gray-color);
+    border-radius: var(--border-radius-s);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#Inquiry .form-group input:focus,
+#Inquiry .form-group textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(10, 75, 204, 0.3);
+}
+
+#Inquiry .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#Inquiry .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-medium);
+    color: var(--white-color);
+    background: var(--primary-color);
+    border-radius: var(--border-radius-m);
+    border: 1px solid var(--primary-color);
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+#Inquiry .btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+
 /* Contact Section Styles */
 .contact-section {
     padding: 50px 0 100px;
