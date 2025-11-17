@@ -11,7 +11,7 @@
 
     /* Color Palette */
     --white-color: #fff;
-    --dark-color: #252525;
+    --dark-color: #161616;
     --primary-color: #0f5e9c;
     --secondary-color: #0a4bcc;
     --light-pink-color: #faf4f5;
@@ -148,7 +148,7 @@ header .navbar {
     background: var(--primary-color);
 }
 
-.hero-section .section-content  {
+.hero-section .section-content {
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -156,57 +156,52 @@ header .navbar {
     justify-content: space-between;
 }
 
-.hero-section .hero-details .title  {
+.hero-section .hero-details .title {
     font-size: var(--font-size-xxl);
-    color: var(--dark-color);
+    color: var(--white-color);
     font-family: 'Miniver', sans-serif;
 }
 
-.hero-section .hero-details .subtitle  {
+.hero-section .hero-details .subtitle {
     margin-top: 8px;
     max-width: 700px;
     font-size: var(--font-size-xl);
 }
 
-.hero-section .hero-details .description  {
+.hero-section .hero-details .description {
     max-width: 70%;
     margin: 24px 0 40px;
     font-size: var(--font-size-m);
 }
 
-.hero-section .hero-details .buttons  {
+.hero-section .hero-details .buttons {
     display: flex;
     gap: 23px;
 }
 
+/* Hero Section Buttons */
 .hero-section .hero-details .button {
     padding: 10px 26px;
-    border: 2px solid transparent;
+    border: 2px solid var(--white-color);
     color: var(--white-color);
-    border-color: var(--white-color);
     border-radius: var(--border-radius-m);
     background: transparent;
-    font-weight: var(--font-weight-medium);    
+    font-weight: var(--font-weight-medium);
     transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 
-
-.hero-section .hero-details .button:hover,
-.hero-section .hero-details .order-now {
+/* Hover effect for all hero-section buttons */
+.hero-section .hero-details .button:hover {
+    background: blue; /* change to your desired hover color */
     color: var(--white-color);
-    background: var(---color);
-    border-color: var(--white-color);
-}
-
-.hero-section .hero-details .order-now:hover {
-    background: blue;
     transform: translateY(-2px);
 }
 
-.hero-section .hero-image-wrapper  {
+.hero-section .hero-image-wrapper {
     max-width: 500px;
     margin-right: 30px;
 }
+
 
 /* About Section Styles */
 .about-section {
@@ -357,7 +352,10 @@ header .navbar {
     border-radius: var(--border-radius-s);
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    color: #000;           /* <-- Text will now be black */
+    background-color: var(--black-color);
 }
+
 
 #Inquiry .form-group input:focus,
 #Inquiry .form-group textarea:focus {
@@ -387,6 +385,7 @@ header .navbar {
     background: var(--secondary-color);
     transform: translateY(-2px);
 }
+
 
 
 
