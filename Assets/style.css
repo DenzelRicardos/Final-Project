@@ -542,8 +542,11 @@ header .navbar {
 .order {
     background: var(--primary-color);
     text-align: center;  
-    
+    font-size: 30px;
+    color: rgb(248, 244, 239);
 }
+
+
 
 /* Menu Section Responsive Media Query*/
 @media screen and (max-width: 640px) {
