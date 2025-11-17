@@ -542,6 +542,11 @@ header {
     color: var(--primary-color);
     background: transparent
 }
+/*map section styles*/
+.map-button-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
 
 .map-section {
     padding: 40px 20px;

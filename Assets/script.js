@@ -87,3 +87,14 @@ const params = {
         alert("Error sending email. Check console for details.");
     });
 }
+
+// Scroll to map when button is clicked
+const mapButton = document.getElementById("map-button");
+const mapSection = document.getElementById("map");
+
+if (mapButton) {
+    mapButton.addEventListener("click", () => {
+        mapSection.scrollIntoView({ behavior: "smooth" });
+    });
+}
+
