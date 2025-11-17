@@ -51,18 +51,39 @@ if (contactForm) {
 }
 
 // Floating order button scroll with Google Form redirect
-const floatingBtn = document.getElementById('floatingOrderBtn');
-if (floatingBtn) {
-    floatingBtn.addEventListener('click', () => {
-        const orderSection = document.querySelector('.order');
-        if (orderSection) {
-            orderSection.scrollIntoView({ behavior: 'smooth' });
-        } else {
+// const floatingBtn = document.getElementById('floatingOrderBtn');
+// if (floatingBtn) {
+//    floatingBtn.addEventListener('click', () => {
+//        const orderSection = document.querySelector('.order');
+//        if (orderSection) {
+//            orderSection.scrollIntoView({ behavior: 'smooth' });
+ //       } else {
             // Show alert before redirecting
-            alert("You will be redirected to our order form.");
+//            alert("You will be redirected to our order form.");
             // Open the Google Form in a new tab
-            window.open("https://docs.google.com/forms/d/YOUR_FORM_ID_HERE", "_blank");
-        }
+//            window.open("https://docs.google.com/forms/d/YOUR_FORM_ID_HERE", "_blank");
+//        }
+//    });
+//}
+//docs.google.com
+
+
+function sendEmail() {
+const params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    time: new Date().toLocaleString(),
+    message: document.getElementById("message").value
+};
+
+
+    emailjs.send("service_quh2898", "template_65v41od", params)
+    .then(() => {
+        alert("Email Sent!");
+    })
+    .catch(error => {
+        console.error("FAILED...", error);
+        alert("Error sending email. Check console for details.");
     });
 }
-docs.google.com

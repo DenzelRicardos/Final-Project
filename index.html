@@ -36,6 +36,20 @@
 
             <button id="menu-open-button" class="fas fa-bars" aria-label="Open menu"></button>
         </nav>
+
+
+        <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "yFVJaDup0AudVNFp-",
+            });
+        })();
+        </script>    
+
+
     </header>
     <main id="top">
         <!--Hero Section-->
@@ -109,7 +123,33 @@
         </section>
 
         <!--Order Section-->
-        <section class="order" id="order">
+        <section id="contact" class="container">
+            <h2>Inquiry form</h2>
+            <form onsubmit="sendEmail(); return false;">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email" required>  
+                </div>
+                <div class="form-group">
+                    <label for="subject">subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+
+
+
+
+<!--       <section class="order" id="order">
             <h2>Order Form</h2>
             <p>Submit your order below:</p>
 
@@ -122,7 +162,7 @@
                     allowfullscreen>
                     Loading…
                 </iframe>
-            </div>
+            </div> -->
 
         <!--Contact Section-->
         <section class="contact-section" id="contact">
@@ -166,13 +206,12 @@
         <!--Footer-->
         <footer>
             <div class="footer-section">
-                <p class="copyright-text">© 2025 Liquatic Works. All rights reserved.</p>
-
-                
+                <p class="copyright-text">© 2025 Liquatic Works. All rights reserved.</p> 
             </div>
         </footer>
     </main>
     
     <script src="Assets/script.js"></script>
+    emailjs.init("uw_AIy6fUXkmYbp1M");
 </body>
 </html>
