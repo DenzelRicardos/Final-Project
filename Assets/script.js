@@ -50,23 +50,17 @@ if (contactForm) {
     });
 }
 
-// Floating order button scroll with Google Form redirect
-// const floatingBtn = document.getElementById('floatingOrderBtn');
-// if (floatingBtn) {
-//    floatingBtn.addEventListener('click', () => {
-//        const orderSection = document.querySelector('.order');
-//        if (orderSection) {
-//            orderSection.scrollIntoView({ behavior: 'smooth' });
- //       } else {
-            // Show alert before redirecting
-//            alert("You will be redirected to our order form.");
-            // Open the Google Form in a new tab
-//            window.open("https://docs.google.com/forms/d/YOUR_FORM_ID_HERE", "_blank");
-//        }
-//    });
-//}
-//docs.google.com
+const textarea = document.getElementById("message");
 
+if (textarea) {
+    textarea.style.height = textarea.offsetHeight + "px";
+
+// Inquiry form 
+    textarea.addEventListener("input", function () {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px"; 
+    });
+}
 
 function sendEmail() {
 const params = {
@@ -76,7 +70,6 @@ const params = {
     time: new Date().toLocaleString(),
     message: document.getElementById("message").value
 };
-
 
     emailjs.send("service_quh2898", "template_65v41od", params)
     .then(() => {
