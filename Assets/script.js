@@ -63,7 +63,7 @@ const params = {
     email: document.getElementById("email").value,
     phone: document.getElementById("phone").value,
     time: new Date().toLocaleString(),
-    message: document.getElementById("message").value
+    order: document.getElementById("order").value
 };
 
     emailjs.send("service_quh2898", "template_65v41od", params)
