@@ -40,25 +40,20 @@ menuItems.forEach(item => {
     }
 });
 
-// Contact form functionality
+// Inquiry form
 const contactForm = document.querySelector('.contact form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        alert('Thank you! Your message has been sent.');
-        contactForm.reset();
-    });
-}
+        e.preventDefault();
 
-const textarea = document.getElementById("message");
+        const phone = document.getElementById("phone").value.trim();
+;
+        const phonePattern = /^\d{11}$/;
 
-if (textarea) {
-    textarea.style.height = textarea.offsetHeight + "px";
-
-// Inquiry form 
-    textarea.addEventListener("input", function () {
-        this.style.height = "auto";
-        this.style.height = this.scrollHeight + "px"; 
+        if (!phonePattern.test(phone)) {
+            alert("Please enter a valid 11-digit phone number.");
+            return;
+        }
     });
 }
 
@@ -66,7 +61,7 @@ function sendEmail() {
 const params = {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
+    phone: document.getElementById("phone").value,
     time: new Date().toLocaleString(),
     message: document.getElementById("message").value
 };
@@ -80,6 +75,25 @@ const params = {
         alert("Error sending email. Check console for details.");
     });
 }
+
+
+const textarea = document.getElementById("message");
+if (textarea) {
+    textarea.style.height = textarea.offsetHeight + "px";
+
+    textarea.addEventListener("input", function () {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+    });
+}
+
+const phoneInput = document.getElementById("phone");
+if (phoneInput) {
+    phoneInput.addEventListener("input", function() {
+        this.value = this.value.replace(/\D/g, ''); 
+    });
+}
+
 
 // Scroll to map when button is clicked
 const mapButton = document.getElementById("map-button");
